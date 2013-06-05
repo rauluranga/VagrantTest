@@ -5,4 +5,4 @@
 
 Test in your browser at: http://localhost:3200/chat 
 
-*original source from https://github.com/danielstockton/nodejs-chat-example
+*original source code for chat app at: https://github.com/danielstockton/nodejs-chat-example
