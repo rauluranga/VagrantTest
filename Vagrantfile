@@ -7,9 +7,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "precise32"
 
   # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  #config.vm.network :forwarded_port, guest: 3200, host: 3200
+  # within the machine from a port on the host machine.
+  config.vm.network :forwarded_port, guest: 3200, host: 3200
 
   config.vm.synced_folder "srv/", "/srv/"
 
@@ -19,8 +18,4 @@ Vagrant.configure("2") do |config|
     salt.run_highstate = true
   end
 
-end
-
-Vagrant::Config.run do |config|
-  config.vm.forward_port 3200, 3200
 end
